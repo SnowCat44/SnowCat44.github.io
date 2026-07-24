@@ -13,6 +13,7 @@
     --sec: #f0883e;
     --crypto: #a371f7;
     --math: #3fb950;
+    --comp: #39d0d8;
   }
   * { box-sizing: border-box; }
   body {
@@ -66,6 +67,7 @@
   .s-sec  { background: rgba(240,136,62,.15);  color: var(--sec);    border: 1px solid rgba(240,136,62,.3); }
   .s-cry  { background: rgba(163,113,247,.15); color: var(--crypto); border: 1px solid rgba(163,113,247,.3); }
   .s-mat  { background: rgba(63,185,80,.15);   color: var(--math);   border: 1px solid rgba(63,185,80,.3); }
+  .s-cmp  { background: rgba(57,208,216,.15);  color: var(--comp);   border: 1px solid rgba(57,208,216,.3); }
 
   .node { font-weight: 500; }
   .leaf { color: var(--muted); font-size: .92rem; }
@@ -117,6 +119,17 @@
 
     <li class="branch"><span class="s-mat">Mathematics</span>
       <ul>
+      </ul>
+    </li>
+
+    <li class="branch"><span class="s-cmp">Computing</span>
+      <ul>
+        <li class="node">CPU</li>
+        <li class="node">GPU
+          <ul>
+            <li class="leaf">CUDA</li>
+          </ul>
+        </li>
       </ul>
     </li>
 
