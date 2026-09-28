@@ -1,0 +1,115 @@
+# 사이트 제목 - 사이트 왼쪽 상단(로고 옆)와 브라우저 탭에 표시됨
+site_name: Notes on Information Security, Cryptography, and Mathematics
+
+# 사이트 URL - 실제로 배포되는 사이트 주소
+site_url: https://SnowCat44.github.io/notes/
+
+# 저장소 URL - GitHub 저장소 주소
+repo_url: https://github.com/SnowCat44/notes
+
+# 저장소 이름 - 실제로 표시되는 이름
+repo_name: SnowCat44/notes
+
+# 저장소 브랜치 - 이 페이지 편집 링크의 경로 규칙
+edit_uri: edit/main/docs/
+
+# "Made with Material for MkDocs" 문구 제거
+extra:
+  generator: false
+
+theme:
+  name: material
+  language: ko          
+  features:
+    - navigation.instant       # 페이지 즉시 전환
+    - navigation.tracking      # URL에 현재 위치 반영
+    - navigation.sections      # 사이드바에 구역 제목 표시
+    - navigation.top           # 맨 위로 버튼
+    #- navigation.footer       # 이전/다음 문서 이동
+    #- search.suggest          # 검색 자동완성
+    - search.highlight         # 검색어 강조
+    - content.code.copy        # 코드 블록 복사 버튼
+    - content.action.edit      # 각 문서 편집 링크
+    - toc.follow               # 목차 자동 스크롤
+  palette:
+    # 시스템 설정 자동 감지
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: 시스템 설정 사용 중 (색상 수동 전환)
+    # 라이트 모드
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드로 전환
+    # 다크 모드
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드로 전환
+
+# 한국어 + 영어 동시 검색 지원
+plugins:
+  - search:
+      lang:
+        - ko
+        - en
+
+markdown_extensions:
+  # 코드 블록 문법 강조 + 줄 번호
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  # 접이식 상자, 콜아웃(참고/경고/증명 등)
+  - admonition
+  - pymdownx.details
+  # 표, 각주, 정의 목록, 약어
+  - tables
+  - footnotes
+  - def_list
+  - abbr
+  - attr_list
+  - md_in_html
+  # 제목에 자동 앵커 링크(항목별 고유 URL)
+  - toc:
+      permalink: true
+  # 이모지·체크박스
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # 수식(LaTeX)
+  - pymdownx.arithmatex:
+      generic: true
+
+# 수식 렌더링(MathJax) + 사용자 정의 스타일
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+# 사이드바 내비게이션 구조
+nav:
+  - 홈: index.md
+  - 정보보안 (Information Security):
+      - 개요: information-security/index.md
+  - 암호 (Cryptography):
+      - 개요: cryptography/index.md
+  - 수학 (Mathematics):
+      - 개요: mathematics/index.md
+  - 참고자료 (References):
+      - 개요: references/index.md
+  
