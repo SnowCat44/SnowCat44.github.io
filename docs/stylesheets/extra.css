@@ -23,3 +23,17 @@
   padding-top: 0.6rem;
   margin-top: 2rem;
 }
+
+/* ===== TikZ 그림 ===== */
+/* 그림을 가운데 정렬하고, 화면보다 크면 줄여서 표시 */
+figure.tikz {
+  margin: 1.5rem auto;   /* auto = 가운데 정렬 (0으로 두면 왼쪽에 붙음) */
+}
+figure.tikz img {
+  max-width: 100%;
+  height: auto;
+}
+/* 다크 모드: 검은 선을 밝게 반전 (색상은 hue-rotate로 원래 색조에 가깝게 유지) */
+[data-md-color-scheme="slate"] figure.tikz img {
+  filter: invert(1) hue-rotate(180deg);
+}

@@ -17,6 +17,10 @@ edit_uri: edit/main/docs/
 extra:
   generator: false
 
+# MkDocs 변환기 빌드
+hooks:
+  - hooks/tikz.py
+
 theme:
   name: material
   language: ko          
