@@ -28,6 +28,17 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+      - name: Install LaTeX for TikZ
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-extra texlive-pictures texlive-lang-korean dvisvgm
+      - name: Cache TikZ SVGs
+        uses: actions/cache@v4
+        with:
+          path: .cache/tikz
+          key: tikz-${{ hashFiles('docs/**/*.md', 'hooks/tikz.py') }}
+          restore-keys: tikz-
       - run: pip install -r requirements.txt
       - run: mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
