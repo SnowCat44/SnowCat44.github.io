@@ -1,0 +1,46 @@
+# workflow의 표시 이름
+name: Deploy MkDocs site to GitHub Pages
+
+# main 브랜치에 push하면 자동 배포
+on:
+  push:
+    branches:
+      - main
+
+# 권한 설정
+permissions:
+  contents: read  # 저장소 내용 읽기 권한
+  pages: write    # GitHub Pages 배포 권한
+  id-token: write # OpenID Connect 토큰 발급 권한(GitHub 증명 토큰)
+
+# 다중 push 이벤트가 발생할 경우, 한 번에 하나의 workflow만 실행되도록 설정
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+# workflow에서 수행할 작업 정의
+jobs:
+  # build job: MkDocs 사이트 빌드
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: pip install -r requirements.txt
+      - run: mkdocs build --strict
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  # deploy job: 빌드된 사이트를 GitHub Pages에 배포
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

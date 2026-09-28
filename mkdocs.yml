@@ -5,10 +5,10 @@ site_name: Notes on Information Security, Cryptography, and Mathematics
 site_url: https://SnowCat44.github.io/
 
 # 저장소 URL - GitHub 저장소 주소
-repo_url: https://github.com/SnowCat44/
+repo_url: https://github.com/SnowCat44/SnowCat44.github.io
 
 # 저장소 이름 - 실제로 표시되는 이름
-repo_name: SnowCat44/github.io
+repo_name: SnowCat44/SnowCat44.github.io
 
 # 저장소 브랜치 - 이 페이지 편집 링크의 경로 규칙
 edit_uri: edit/main/docs/
