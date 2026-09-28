@@ -1,5 +1,5 @@
 /* 각 사전 항목 상단의 "한 줄 정의"를 눈에 띄게 */
-.definition {
+p.definition {   /* 예전 "한 줄 정의" 문단 전용 (정의 상자와 이름이 겹치지 않게 p로 한정) */
   border-left: 4px solid var(--md-primary-fg-color);
   background: var(--md-code-bg-color);
   padding: 0.6rem 1rem;
@@ -37,3 +37,55 @@ figure.tikz img {
 [data-md-color-scheme="slate"] figure.tikz img {
   filter: invert(1) hue-rotate(180deg);
 }
+
+/* ===== 정의 · 정리 · 예시 · 알고리즘 상자 ===== */
+/* 색: 정의=파랑, 정리=보라, 예시=초록, 알고리즘=주황
+   아이콘은 Material 테마에 내장된 아이콘을 재사용 */
+:root {
+  --box-definition: #1e6fd9;
+  --box-theorem:    #7b3fc4;
+  --box-example:    #1f8a4c;
+  --box-algorithm:  #c46a12;
+}
+
+.md-typeset .admonition.definition { border-color: var(--box-definition); }
+.md-typeset .admonition.theorem    { border-color: var(--box-theorem); }
+.md-typeset .admonition.example    { border-color: var(--box-example); }
+.md-typeset .admonition.algorithm  { border-color: var(--box-algorithm); }
+
+.md-typeset .definition > .admonition-title { background-color: color-mix(in srgb, var(--box-definition) 10%, transparent); }
+.md-typeset .theorem    > .admonition-title { background-color: color-mix(in srgb, var(--box-theorem) 10%, transparent); }
+.md-typeset .example    > .admonition-title { background-color: color-mix(in srgb, var(--box-example) 10%, transparent); }
+.md-typeset .algorithm  > .admonition-title { background-color: color-mix(in srgb, var(--box-algorithm) 10%, transparent); }
+
+.md-typeset .definition > .admonition-title::before { background-color: var(--box-definition); -webkit-mask-image: var(--md-admonition-icon--abstract); mask-image: var(--md-admonition-icon--abstract); }
+.md-typeset .theorem    > .admonition-title::before { background-color: var(--box-theorem);    -webkit-mask-image: var(--md-admonition-icon--info);     mask-image: var(--md-admonition-icon--info); }
+.md-typeset .example    > .admonition-title::before { background-color: var(--box-example);    -webkit-mask-image: var(--md-admonition-icon--example);  mask-image: var(--md-admonition-icon--example); }
+.md-typeset .algorithm  > .admonition-title::before { background-color: var(--box-algorithm);  -webkit-mask-image: var(--md-admonition-icon--tip);      mask-image: var(--md-admonition-icon--tip); }
+
+/* 다크 모드에서는 조금 밝은 색으로 */
+[data-md-color-scheme="slate"] {
+  --box-definition: #5a9cf0;
+  --box-theorem:    #a77ee6;
+  --box-example:    #4cbb7a;
+  --box-algorithm:  #e59a4a;
+}
+
+/* ===== 증명 상자 (접이식) ===== */
+/* 정리 상자 안에 들어가므로 색 없이 얇은 회색 테두리로 구분 */
+.md-typeset details.proof {
+  border-color: var(--md-default-fg-color--lighter);
+  box-shadow: none;
+}
+.md-typeset details.proof > summary {
+  background-color: transparent;
+  font-style: italic;
+}
+.md-typeset details.proof > summary::before {
+  background-color: var(--md-default-fg-color--light);
+  -webkit-mask-image: var(--md-admonition-icon--quote);
+  mask-image: var(--md-admonition-icon--quote);
+}
+
+/* 고유 ID로 이동했을 때 상단 메뉴에 가려지지 않게 */
+.md-typeset .admonition[id] { scroll-margin-top: 4rem; }
