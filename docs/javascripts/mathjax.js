@@ -8,6 +8,9 @@ window.MathJax = {
   options: {
     ignoreHtmlClass: ".*|",
     processHtmlClass: "arithmatex"
+  },
+  chtml: {
+    mtextInheritFont: true
   }
 };
 
