@@ -108,5 +108,3 @@ figure.tikz img {
   mask-image: var(--md-admonition-icon--quote);
 }
 
-/* 고유 ID로 이동했을 때 상단 메뉴에 가려지지 않게 */
-.md-typeset .admonition[id] { scroll-margin-top: 4rem; }
