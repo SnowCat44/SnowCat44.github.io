@@ -131,18 +131,23 @@ validation:
 nav:
   - 홈: index.md
   - 암호 (Cryptography):
-      - 개요: cryptography/index.md
+    - 개요: cryptography/index.md
+    - 양자내성암호 (Post-Quantum Cryptography):
+      - 개요: cryptography/post-quantum/index.md
+      - ML-DSA:
+        - 개요: cryptography/post-quantum/ml-dsa/index.md
+        - NTT Representation: cryptography/post-quantum/ml-dsa/ntt-representation.md
   - 수학 (Mathematics):
-      - 개요: mathematics/index.md
+    - 개요: mathematics/index.md
   - 컴퓨터 과학 (Computer Science):
-      - 개요: computer-science/index.md
+    - 개요: computer-science/index.md
   - 컴퓨터 시스템 (Computer Systems):
-      - 개요: computer-systems/index.md
+    - 개요: computer-systems/index.md
   - 프로그래밍 (Programming):
-      - 개요: programming/index.md
+    - 개요: programming/index.md
   - 코드 (Code):
-      - 개요: code/index.md
+    - 개요: code/index.md
   - 참고자료 (References):
-      - 개요: references/index.md
+    - 개요: references/index.md
   - 프로젝트 (Projects):
-      - 개요: projects/index.md
+    - 개요: projects/index.md
