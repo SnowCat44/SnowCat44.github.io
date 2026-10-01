@@ -13,13 +13,23 @@ repo_name: SnowCat44/SnowCat44.github.io
 # 저장소 브랜치 - 이 페이지 편집 링크의 경로 규칙
 edit_uri: edit/main/docs/
 
-# "Made with Material for MkDocs" 문구 제거
-extra:
-  generator: false
+# footer 문구
+copyright: >-
+  © 2026 SnowCat44 ·
+  직접 쓴 글은 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko">CC BY-NC-ND 4.0</a>,
+  인용한 자료의 권리는 각 원저작자에게 있음 ·
+  마지막 빌드 {build_date}
 
-# MkDocs 변환기 빌드
+extra:
+  generator: false # "Made with Material for MkDocs" 문구 제거
+  social: # 소셜 링크 - 사이드바 하단에 표시됨
+  - icon: fontawesome/brands/github
+    link: https://github.com/SnowCat44
+    name: GitHub
+
 hooks:
-  - hooks/tikz.py
+  - hooks/tikz.py   # MkDocs 변환기 빌드
+  - hooks/footer.py # footer 빌드
 
 theme:
   name: material

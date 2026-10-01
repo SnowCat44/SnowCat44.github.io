@@ -163,3 +163,10 @@ figure.tikz img {
     color: var(--box-definition);
   }
 }
+
+/* ===== 푸터 ===== */
+/* 기본 모양에서는 라이선스 링크가 글자와 구분되지 않아 밑줄만 더한다 */
+.md-copyright a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
