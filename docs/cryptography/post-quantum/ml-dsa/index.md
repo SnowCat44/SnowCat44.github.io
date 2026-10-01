@@ -1,1 +1,3 @@
-[NTT-representation](cryptography/post-quantum/ml-dsa/ntt-representation.md)
+# ML-DSA
+
+[NTT-representation](ntt-representation.md)
