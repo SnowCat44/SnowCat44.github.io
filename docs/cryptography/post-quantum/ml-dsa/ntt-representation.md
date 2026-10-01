@@ -10,5 +10,5 @@ $$\text{NTT}(w)=(w(\zeta_0),w(\zeta_1),\dots,w(\zeta_{255})) \in T_q,$$
 
 NTT를 사용하는 동기는 환 $T_q$에서 곱셈이 상당히 더 빠르기 때문이다. NTT가 동형사상이므로, 임의의 $a,b \in R_q$에 대해,
 
-$$\text{NTT}(ab)=text{NTT}(a) \circ text{NTT}(b).$$
+$$\text{NTT}(ab)=\text{NTT}(a) \circ \text{NTT}(b).$$
 
