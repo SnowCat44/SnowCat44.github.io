@@ -124,3 +124,42 @@ figure.tikz img {
   -webkit-mask-image: var(--md-admonition-icon--quote);
   mask-image: var(--md-admonition-icon--quote);
 }
+
+/* ===== 사이드바 (왼쪽 목차) ===== */
+/* 넓은 화면에만 적용한다. 좁은 화면의 메뉴는 Material 기본 모양을 유지한다. */
+@media screen and (min-width: 76.25em) {
+  /* 챕터(홈, 대분류) 사이에 구분선과 여백 */
+  .md-nav--primary > .md-nav__list > .md-nav__item {
+    margin: 0;                /* Material이 구역 위에 두는 큰 여백을 없애고 */
+    padding: 0.6rem 0;        /* 구분선 위아래로 같은 여백을 둔다 */
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  }
+  .md-nav--primary > .md-nav__list > .md-nav__item:last-child {
+    border-bottom: none;
+  }
+
+  /* 챕터 제목: 기본(0.7rem = 14px)보다 2px 크게, 굵게, 본문 글자색 */
+  .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link {
+    font-size: calc(0.7rem + 2px);
+    font-weight: 700;
+    color: var(--md-default-fg-color);
+    margin-top: 0;
+  }
+
+  /* 챕터 안의 항목: 회색 */
+  .md-nav--primary .md-nav[data-md-level="1"] .md-nav__link {
+    color: var(--md-default-fg-color--light);
+  }
+
+  /* 지금 보고 있는 페이지: 파랑 + 굵게 (정의 상자와 같은 파랑, 다크 모드 변형 포함) */
+  .md-nav--primary .md-nav__link--active,
+  .md-nav--primary .md-nav[data-md-level="1"] .md-nav__link--active {
+    color: var(--box-definition);
+    font-weight: 700;
+  }
+
+  /* 마우스를 올렸을 때도 같은 파랑 */
+  .md-nav--primary .md-nav__link:is([href], [for]):hover {
+    color: var(--box-definition);
+  }
+}
