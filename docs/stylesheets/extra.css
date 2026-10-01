@@ -169,4 +169,5 @@ figure.tikz img {
 .md-copyright a {
   text-decoration: underline;
   text-underline-offset: 0.15em;
+  font-family: var(--md-text-font-family);
 }
