@@ -145,6 +145,9 @@ nav:
     - 개요: cryptography/index.md
     - 양자내성암호:
       - 개요: cryptography/post-quantum/index.md
+      - ML-DSA:
+        - 개요: cryptography/post-quantum/ml-dsa/index.md
+        - NTT Representation: cryptography/post-quantum/ml-dsa/ntt-representation.md
   - 수학:
     - 개요: mathematics/index.md
   - 컴퓨터 과학:
