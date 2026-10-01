@@ -1,6 +1,6 @@
 # NTT 표현 (NTT Representation)
 
-***상태: 작성 중 · 최종 수정일: 2026. 9. 30.***
+***상태: 작성 중 · 최종 수정일: 2026. 10. 1.***
 
 수론 변환(Number Theoretic Transform, NTT)은 환(ring)의 $R_q$와 $T_q$ 사이의 특정한 동형사상(isomorphism)이다. $\zeta=1753 \in \mathbb{Z}_q$라 하자. 이는 512번째 단위근(root of unity)이다. $w \in R_q$일 때,
 

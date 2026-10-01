@@ -130,24 +130,24 @@ validation:
 # 사이드바 내비게이션 구조
 nav:
   - 홈: index.md
-  - 암호 (Cryptography):
+  - 암호:
     - 개요: cryptography/index.md
-    - 양자내성암호 (Post-Quantum Cryptography):
+    - 양자내성암호:
       - 개요: cryptography/post-quantum/index.md
       - ML-DSA:
         - 개요: cryptography/post-quantum/ml-dsa/index.md
         - NTT Representation: cryptography/post-quantum/ml-dsa/ntt-representation.md
-  - 수학 (Mathematics):
+  - 수학:
     - 개요: mathematics/index.md
-  - 컴퓨터 과학 (Computer Science):
+  - 컴퓨터 과학:
     - 개요: computer-science/index.md
-  - 컴퓨터 시스템 (Computer Systems):
+  - 컴퓨터 시스템:
     - 개요: computer-systems/index.md
-  - 프로그래밍 (Programming):
+  - 프로그래밍:
     - 개요: programming/index.md
-  - 코드 (Code):
+  - 코드:
     - 개요: code/index.md
-  - 참고자료 (References):
+  - 참고자료:
     - 개요: references/index.md
-  - 프로젝트 (Projects):
+  - 프로젝트:
     - 개요: projects/index.md
