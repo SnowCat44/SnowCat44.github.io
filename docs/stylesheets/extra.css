@@ -19,6 +19,23 @@
   font-size: 0.9rem;
 }
 
+/* ===== 가독성 ===== */
+/* 정의·정리 상자, 증명 상자, 표의 글자를 본문과 같은 크기로
+   (테마 기본값은 본문보다 작은 고정 크기) */
+.md-typeset .admonition,
+.md-typeset details,
+.md-typeset table:not([class]) {
+  font-size: inherit;
+}
+
+/* 제목: 흐린 회색·가는 굵기 대신 본문과 같은 진한 색, 굵게 */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+}
+
 /* 각 사전 항목 상단의 "한 줄 정의"를 눈에 띄게 */
 p.definition {   /* 예전 "한 줄 정의" 문단 전용 (정의 상자와 이름이 겹치지 않게 p로 한정) */
   border-left: 4px solid var(--md-primary-fg-color);
@@ -107,4 +124,3 @@ figure.tikz img {
   -webkit-mask-image: var(--md-admonition-icon--quote);
   mask-image: var(--md-admonition-icon--quote);
 }
-
