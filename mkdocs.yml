@@ -156,6 +156,9 @@ nav:
     - 개요: computer-systems/index.md
   - 프로그래밍:
     - 개요: programming/index.md
+    - LaTeX:
+      - 개요: programming/latex/index.md
+      - 수학 조판: programming/latex/mathematics.md
   - 코드:
     - 개요: code/index.md
   - 참고자료:

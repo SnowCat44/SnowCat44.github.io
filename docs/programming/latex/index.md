@@ -4,4 +4,4 @@ LaTeX는 문서 조판을 위한 소프트웨어 시스템으로, TeX를 더 쉽
 
 ## 항목 목록
 
-<!-- 새 항목을 추가하면 위 목록과 mkdocs.yml의 nav에 한 줄씩 더하세요. -->
+[Mathematics](mathematics.md)

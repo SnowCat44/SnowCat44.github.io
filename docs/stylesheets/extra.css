@@ -16,7 +16,7 @@
 /* 본문에만 적용 (사이드바·메뉴는 테마 기본 글꼴 유지). 코드는 테마의 고정폭 글꼴 유지 */
 .md-typeset {
   font-family: "CMU Serif", "Nanum Myeongjo", serif;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 /* ===== 가독성 ===== */
@@ -197,4 +197,39 @@ figure.tikz img {
 .md-sidebar__scrollwrap:hover::-webkit-scrollbar-thumb:hover,
 .md-sidebar__scrollwrap:focus-within::-webkit-scrollbar-thumb:hover {
   background-color: var(--md-default-fg-color--light);
+}
+
+/* ===== 표 ===== */
+/* 글자: 본문과 동일 */
+.md-typeset table:not([class]) {
+  font-size: 0.75rem;
+}
+/* 칸 여백: Material 기본값(0.9375em 1.25em)보다 좁게, 세로 가운데 맞춤 */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  padding: 0.5em 0.8em;
+  vertical-align: middle;   /* Material 기본값은 위쪽 맞춤(top) */
+}
+/* 제목 행: 옅은 회색 배경 (다크 모드에서는 자동으로 밝은 회색 계열) */
+.md-typeset table:not([class]) th {
+  background-color: var(--md-default-fg-color--lightest);
+}
+/* 표 안의 코드는 중간에서 줄바꿈하지 않는다 */
+.md-typeset table:not([class]) code {
+  white-space: nowrap;
+  word-break: normal;
+}
+/* 표 너비: 내용이 짧아도 본문 폭을 꽉 채운다 (열 비율은 내용 길이에 따라 브라우저가 나눔)
+   Material이 표를 내용 폭만큼만 차지하는 상자(.md-typeset__table)로 감싸므로 그 상자부터 넓힌다 */
+.md-typeset .md-typeset__table {
+  width: 100%;
+}
+.md-typeset table:not([class]) {
+  display: table;
+  width: 100%;
+}
+/* 세로 구분선: 첫 열을 뺀 모든 칸의 왼쪽에 바깥 테두리와 같은 선 */
+.md-typeset table:not([class]) th + th,
+.md-typeset table:not([class]) td + td {
+  border-left: 0.05rem solid var(--md-typeset-table-color);
 }

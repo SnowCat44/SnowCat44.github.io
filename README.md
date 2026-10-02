@@ -21,6 +21,12 @@
 
 ---
 
+###
+
+- 작업용 실시간 서버 실행
+source .venv/bin/activate
+mkdocs serve --livereload
+
 ## 1. 기본 원칙
 
 1. 저장소에는 공개되어도 되는 파일만 올린다. 저장소도 사이트도 공개 상태다.
