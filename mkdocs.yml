@@ -16,9 +16,9 @@ edit_uri: edit/main/docs/
 # footer 문구
 copyright: >-
   © 2026 SnowCat44 ·
-  직접 쓴 글은 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko">CC BY-NC-ND 4.0</a>,
+  모든 내용은 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko">CC BY-NC-ND 4.0</a>,
   인용한 자료의 권리는 각 원저작자에게 있음 ·
-  마지막 빌드 {build_date}
+  마지막 업데이트 {build_date}
 
 extra:
   generator: false # "Made with Material for MkDocs" 문구 제거
